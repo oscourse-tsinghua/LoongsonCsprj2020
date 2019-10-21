@@ -1,8 +1,7 @@
 # LoongsonCsprj2020
-http://os.cs.tsinghua.edu.cn/oscourse/project/LoongsonCsprj2020
 
-test...
+ * [wiki](http://os.cs.tsinghua.edu.cn/oscourse/project/LoongsonCsprj2020)
 
-https://app.gitbook.com/@oscourse-tsinghua/s/loongsoncsprj2020-manula/
+ * [gitbook](https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual/)
 
-test...
+ * [github repo](https://github.com/oscourse-tsinghua/LoongsonCsprj2020)
