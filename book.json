@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "chapter-fold",
+    "code",
+    "search-pro",
+    "github",
+    "localized-footer",
+    "ancre-navigation",
+    "-sharing"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual"
+    },
+    "localized-footer": {
+      "filename": "gitbook/comment.html"
+    }
+  },
+  "styles": {
+    "website": "gitbook/website.css"
+  }
+}
