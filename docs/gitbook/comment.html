@@ -1,0 +1,35 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="margin: 5%"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '6677d86cc13c39961dfc',
+    clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+    repo: 'LoongsonCsprj2020',
+    owner: 'xyongcn',
+    admin: ['xyongcn'],
+    createIssueManually: true,
+    id: document.title
+  })
+  gitalk.render('gitalk-container')
+</script>
+<script>
+  require(['gitbook'], function(gitbook) {
+    const gitalk = new Gitalk({
+      clientID: '6677d86cc13c39961dfc',
+      clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+      repo: 'LoongsonCsprj2020',
+      owner: 'xyongcn',
+      admin: ['xyongcn'],
+      createIssueManually: true,
+      id: document.title
+    })
+    gitbook.events.bind('page.change', initMygitalk)
+    function initMygitalk() {
+      gitalk.render('gitalk-container')
+    }
+  })
+</script>

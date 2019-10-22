@@ -1,0 +1,860 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.1.2 Vivado的基本使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../gitbook/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vivado和板子的连接.html" />
+    
+    
+    <link rel="prev" href="Vivado环境的安装.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    1. 简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="实验箱介绍.html">
+            
+                <a href="实验箱介绍.html">
+            
+                    
+                    1.1龙芯实验箱介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="实验箱测试.html">
+            
+                <a href="实验箱测试.html">
+            
+                    
+                    1.2实验箱测试流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. 基于FPGA的MIPS32SCPU实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Vivado开发环境.html">
+            
+                <a href="Vivado开发环境.html">
+            
+                    
+                    2.1 Vivado开发环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="Vivado环境的安装.html">
+            
+                <a href="Vivado环境的安装.html">
+            
+                    
+                    2.1.1 Vivado环境的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.2" data-path="Vivado的基本使用.html">
+            
+                <a href="Vivado的基本使用.html">
+            
+                    
+                    2.1.2 Vivado的基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="vivado和板子的连接.html">
+            
+                <a href="vivado和板子的连接.html">
+            
+                    
+                    2.1.3 Vivado和实验板的连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基于soc_up的移植过程.html">
+            
+                <a href="基于soc_up的移植过程.html">
+            
+                    
+                    2.2 基于soc_up的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="flash烧录方法.html">
+            
+                <a href="flash烧录方法.html">
+            
+                    
+                    2.2.1 Flash的烧录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="FPGA固化方法.html">
+            
+                <a href="FPGA固化方法.html">
+            
+                    
+                    2.2.2 FPGA固化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="串口工具的配置和使用.html">
+            
+                <a href="串口工具的配置和使用.html">
+            
+                    
+                    2.2.3 串口工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="TFTP服务器的搭建和使用.html">
+            
+                <a href="TFTP服务器的搭建和使用.html">
+            
+                    
+                    2.2.4 TFTP服务器的搭建及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="操作系统的移植.html">
+            
+                <a href="操作系统的移植.html">
+            
+                    
+                    2.2.5 Liunx内核的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="ram的初始化.html">
+            
+                <a href="ram的初始化.html">
+            
+                    
+                    2.3 ROM的初始化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="初始化ram的方法.html">
+            
+                <a href="初始化ram的方法.html">
+            
+                    
+                    2.3.1 ROM的初始化过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="测试程序编译环境及流程介绍.html">
+            
+                <a href="测试程序编译环境及流程介绍.html">
+            
+                    
+                    2.3.2  测试程序编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="基于NaiveMIPScpu的启动过程.html">
+            
+                <a href="基于NaiveMIPScpu的启动过程.html">
+            
+                    
+                    2.4 基于NaiveMIPS的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="NavieMIPS的综合运行.html">
+            
+                <a href="NavieMIPS的综合运行.html">
+            
+                    
+                    2.4.1 NavieMIPS的综合运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="监控程序的移植过程.html">
+            
+                <a href="监控程序的移植过程.html">
+            
+                    
+                    2.4.2 supervisor的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="U-Boot启动过程.html">
+            
+                <a href="U-Boot启动过程.html">
+            
+                    
+                    2.4.3 U-Boot的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="ucore的启动过程.html">
+            
+                <a href="ucore的启动过程.html">
+            
+                    
+                    2.4.4 ucore的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="ILA的使用.html">
+            
+                <a href="ILA的使用.html">
+            
+                    
+                    2.5 ILA的使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ucore/">
+            
+                <a href="../ucore/">
+            
+                    
+                    3. MIPS32S CPU上的ucore教学操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ucore/make.html">
+            
+                <a href="../ucore/make.html">
+            
+                    
+                    3.1 make 命令的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ucore/crosstools.html">
+            
+                <a href="../ucore/crosstools.html">
+            
+                    
+                    3.2 交叉工具链介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ucore/交叉编译环境配置.html">
+            
+                <a href="../ucore/交叉编译环境配置.html">
+            
+                    
+                    3.3 交叉编译环境的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ucore/U-Boot移植过程.html">
+            
+                <a href="../ucore/U-Boot移植过程.html">
+            
+                    
+                    3.4 U-Boot的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ucore/qemu.html">
+            
+                <a href="../ucore/qemu.html">
+            
+                    
+                    3.5 QEMU介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ucore/os_comp.html">
+            
+                <a href="../ucore/os_comp.html">
+            
+                    
+                    3.6 ucore编译方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ucore/龙芯编译环境配置.html">
+            
+                <a href="../ucore/龙芯编译环境配置.html">
+            
+                    
+                    3.7 龙芯编译环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ucore/对supervisor交互程序term.py的修改.md">
+            
+                <span>
+            
+                    
+                    3.8 对supervisor交互程序term.py的修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../compiler/">
+            
+                <a href="../compiler/">
+            
+                    
+                    4. MIPS32S上的C0编译器实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../integration/">
+            
+                <a href="../integration/">
+            
+                    
+                    系统集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.1.2 Vivado的基本使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4E00;-&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;"><b></b>&#x4E00;. &#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;-&#x6DFB;&#x52A0;verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;design-source&#xFF09;"><b></b>&#x4E8C;. &#x6DFB;&#x52A0;Verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;Design Source&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;-&#x6DFB;&#x52A0;verilog&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF08;simulation-source&#xFF09;"><b></b>&#x4E09;. &#x6DFB;&#x52A0;Verilog&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF08;Simulation Source&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;-&#x7F16;&#x5199;&#x4EE3;&#x7801;"><b></b>&#x56DB;. &#x7F16;&#x5199;&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x4E94;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#xFF08;behavioral-simulation&#xFF09;&#x4E0E;testbench"><b></b>&#x4E94;. &#x884C;&#x4E3A;&#x4EFF;&#x771F;&#xFF08;Behavioral Simulation&#xFF09;&#x4E0E;Testbench</a></li><li><span class="title-icon "></span><a href="#&#x516D;-&#x7F16;&#x5199;&#x4EFF;&#x771F;&#x4EE3;&#x7801;"><b></b>&#x516D;. &#x7F16;&#x5199;&#x4EFF;&#x771F;&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#&#x4E03;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;"><b></b>&#x4E03;. &#x884C;&#x4E3A;&#x4EFF;&#x771F;</a></li><li><span class="title-icon "></span><a href="#&#x516B;-&#x64CD;&#x4F5C;&#x6280;&#x5DE7;"><b></b>&#x516B;. &#x64CD;&#x4F5C;&#x6280;&#x5DE7;</a></li></ul></div><a href="#&#x4E00;-&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E00;-&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;"><a name="&#x4E00;-&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x4E00;-&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;. &#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;</h1>
+<p>&#x6253;&#x5F00;Vivado&#x8F6F;&#x4EF6;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x6B22;&#x8FCE;&#x754C;&#x9762;&#x70B9;&#x51FB;Create New Project</p>
+<p>&#x6216;&#x5728;&#x5F00;&#x59CB;&#x83DC;&#x5355;&#x4E2D;&#x9009;&#x62E9;File - New Project&#x5373;&#x53EF;&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;&#x3002;</p>
+<p><img src="../assets/&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;2.png" alt=""></p>
+<p>&#x70B9;&#x51FB;Next</p>
+<p><img src="../assets/test1.png" alt=""></p>
+<p>&#x8F93;&#x5165;&#x5DE5;&#x7A0B;&#x540D;&#x79F0;&#x548C;&#x8DEF;&#x5F84;</p>
+<p><img src="../assets/&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;3.png" alt=""></p>
+<p>&#x9009;&#x62E9;RTL Project&#xFF0C;&#x52FE;&#x9009;Do not specify......&#xFF08;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x6DFB;&#x52A0;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x6B65;&#x9AA4;&#xFF0C;&#x6E90;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x540E;&#x9762;&#x518D;&#x6DFB;&#x52A0;&#xFF09;</p>
+<p><img src="../assets/&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;4.png" alt=""></p>
+<p>&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x5F00;&#x53D1;&#x677F;&#x9009;&#x62E9;&#x5668;&#x4EF6;&#x578B;&#x53F7;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x578B;&#x53F7;&#x8FDB;&#x884C;&#x641C;&#x7D22;&#xFF0C;&#x4F8B;&#x5982;&#x9F99;&#x82AF;&#x5F00;&#x53D1;&#x677F;&#x4E0A;&#x7684;&#x82AF;&#x7247;&#x578B;&#x53F7;&#x4E3A;Artix-7 AC701&#x3002;&#x5982;&#x679C;&#x4E0D;&#x4E86;&#x89E3;&#x6216;&#x8005;&#x6682;&#x65F6;&#x4E0D;&#x5199;&#x8FDB;&#x5F00;&#x53D1;&#x677F;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x9009;&#x4E00;&#x4E2A;&#x578B;&#x53F7;&#xFF0C;&#x540E;&#x9762;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x518D;&#x4FEE;&#x6539;</p>
+<p><img src="../assets/&#x65B0;&#x5EFA;&#x5DE5;&#x7A0B;5.png" alt=""></p>
+<p>&#x70B9;&#x51FB;Finish&#xFF0C;&#x9879;&#x76EE;&#x65B0;&#x5EFA;&#x5B8C;&#x6210;</p>
+<h1 id="&#x4E8C;-&#x6DFB;&#x52A0;verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;design-source&#xFF09;"><a name="&#x4E8C;-&#x6DFB;&#x52A0;verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;design-source&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;-&#x6DFB;&#x52A0;verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;design-source&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;. &#x6DFB;&#x52A0;Verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF08;Design Source&#xFF09;</h1>
+<p>&#x5728;Project Manager&#x7A97;&#x53E3;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;Source&#x5B50;&#x7A97;&#x53E3;&#xFF0C;&#x5728;&#x7A7A;&#x767D;&#x5904;&#x6216;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x5939;&#x4E0A;&#x53F3;&#x51FB;&#xFF0C;&#x9009;&#x62E9;Add Sources&#xFF0C;&#x6216;&#x8005;&#x70B9;&#x51FB;&#x4E0A;&#x9762;&#x7684;&#x7EFF;&#x8272;&#x52A0;&#x53F7;&#x56FE;&#x6807;</p>
+<p>&#x9009;&#x62E9;Add or Create Design Sources</p>
+<p><img src="../assets/add_source1_1.png" alt=""></p>
+<p>&#x70B9;&#x51FB;Next&#x3002;</p>
+<p><img src="../assets/add_source1_3.png" alt=""></p>
+<p>&#x70B9;&#x51FB;Create File&#x6309;&#x94AE;</p>
+<p><img src="../assets/add_source1_4.png" alt=""></p>
+<p>&#x5F39;&#x51FA;&#x7684;&#x5C0F;&#x7A97;&#x53E3;&#x4E2D;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x70B9;&#x51FB;OK&#x3002;</p>
+<p><img src="../assets/add_source1_5.png" alt=""></p>
+<p>&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x65B0;&#x5EFA;&#x6216;&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6700;&#x540E;&#x70B9;&#x51FB;Finish&#x3002;</p>
+<p>&#x7A0D;&#x540E;&#x4F1A;&#x5F39;&#x51FA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x521A;&#x521A;&#x6DFB;&#x52A0;&#x7684;test&#x6587;&#x4EF6;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;test&#x6A21;&#x5757;&#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x7AEF;&#x53E3;&#xFF1B;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x70B9;&#x51FB;OK&#xFF0C;&#x7A0D;&#x540E;&#x518D;&#x81EA;&#x884C;&#x7F16;&#x5199;&#x3002;</p>
+<p><img src="../assets/add_source1_6.png" alt=""></p>
+<p>&#x70B9;&#x51FB;OK&#x540E;&#xFF0C;&#x5982;&#x679C;&#x5F39;&#x51FA;&#x4E0B;&#x9762;&#x7A97;&#x53E3;&#x76F4;&#x63A5;&#x70B9;&#x51FB;Yes&#x3002;</p>
+<p>test&#x6587;&#x4EF6;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x5757;&#x5373;&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#xFF0C;&#x5982;&#x56FE;</p>
+<p><img src="../assets/add_source1_7.png" alt=""></p>
+<h1 id="&#x4E09;-&#x6DFB;&#x52A0;verilog&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF08;simulation-source&#xFF09;"><a name="&#x4E09;-&#x6DFB;&#x52A0;verilog&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF08;simulation-source&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E09;-&#x6DFB;&#x52A0;verilog&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF08;simulation-source&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;. &#x6DFB;&#x52A0;Verilog&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF08;Simulation Source&#xFF09;</h1>
+<p>&#x64CD;&#x4F5C;&#x548C;&#x4E0A;&#x4E00;&#x6B65;&#x6DFB;&#x52A0;Verilog&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x662F;&#x9009;&#x62E9;Add or Create Simulation Sources&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;simu&#x7684;&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#x65B0;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5728;Design Sources&#x548C;Simulation Sources&#x4E2D;&#x90FD;&#x6709;&#xFF0C;&#x800C;&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#x53EA;&#x4F1A;&#x51FA;&#x73B0;&#x5728;Simulation Sources&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x4EFF;&#x771F;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6700;&#x7EC8;&#x70E7;&#x5199;&#x8FDB;&#x5F00;&#x53D1;&#x677F;&#xFF0C;&#x800C;&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#x4EC5;&#x7528;&#x4E8E;&#x4EFF;&#x771F;&#x3002;</p>
+<h1 id="&#x56DB;-&#x7F16;&#x5199;&#x4EE3;&#x7801;"><a name="&#x56DB;-&#x7F16;&#x5199;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x56DB;-&#x7F16;&#x5199;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;. &#x7F16;&#x5199;&#x4EE3;&#x7801;</h1>
+<p>&#x6253;&#x5F00;test&#x6A21;&#x5757;&#xFF0C;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x975E;&#x95E8;&#x7535;&#x8DEF;&#x5982;&#x4E0B;&#x3002;</p>
+<p><code>module test(</code></p>
+<p><code>input in,</code></p>
+<p><code>output out</code></p>
+<p><code>);</code></p>
+<p><code>assign out = ~in;</code></p>
+<p><code>endmodule</code></p>
+<h1 id="&#x4E94;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#xFF08;behavioral-simulation&#xFF09;&#x4E0E;testbench"><a name="&#x4E94;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#xFF08;behavioral-simulation&#xFF09;&#x4E0E;testbench" class="anchor-navigation-ex-anchor" href="#&#x4E94;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#xFF08;behavioral-simulation&#xFF09;&#x4E0E;testbench"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;. &#x884C;&#x4E3A;&#x4EFF;&#x771F;&#xFF08;Behavioral Simulation&#xFF09;&#x4E0E;Testbench</h1>
+<p>&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#x3002;&#x6211;&#x4EEC;&#x7ED9;&#x4E0A;&#x9762;&#x7684;test&#x6A21;&#x5757;&#x8F93;&#x5165;&#x7AEF;in&#x63A5;&#x5165;&#x4E00;&#x4E2A;&#x65F6;&#x949F;&#x4FE1;&#x53F7;&#xFF0C;&#x5219;&#x8F93;&#x51FA;&#x7AEF;out&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x7535;&#x5E73;&#x76F8;&#x53CD;&#x7684;&#x65F6;&#x949F;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#x65F6;&#xFF0C;&#x8F93;&#x5165;&#x4FE1;&#x53F7;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Testbench&#x7F16;&#x5199;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;test&#x6A21;&#x5757;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;Testbench&#x4EE3;&#x7801;&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x4EFF;&#x771F;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x4E0D;&#x592A;&#x6B63;&#x786E;&#x7684;&#x505A;&#x6CD5;&#x3002;&#x56E0;&#x4E3A;test&#x6A21;&#x5757;&#x662F;&#x8BBE;&#x8BA1;&#x6587;&#x4EF6;&#xFF0C;&#x540E;&#x9762;&#x53EF;&#x80FD;&#x4F1A;&#x76F4;&#x63A5;&#x70E7;&#x5199;&#x8FDB;&#x677F;&#x5B50;&#x3002;&#x8FDB;&#x884C;&#x4EFF;&#x771F;&#x65F6;&#x6DFB;&#x52A0;&#x4E86;Testbench&#x4EE3;&#x7801;&#xFF0C;&#x4E4B;&#x540E;&#x518D;&#x70E7;&#x5199;&#x8FDB;&#x677F;&#x5B50;&#x53C8;&#x5F97;&#x5220;&#x6389;Testbench&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x6837;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x4E14;&#x64CD;&#x4F5C;&#x8D77;&#x6765;&#x4E5F;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x3002;&#x5C24;&#x5176;&#x662F;&#x63A5;&#x53E3;&#x6570;&#x91CF;&#x591A;&#xFF0C;&#x5185;&#x90E8;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5C06;Testbench&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x5199;&#x5230;&#x4EFF;&#x771F;&#x6587;&#x4EF6;simu&#x4E2D;&#xFF0C;&#x5E76;&#x5728;simu&#x6587;&#x4EF6;&#x4E2D;&#x8C03;&#x7528;test&#x6A21;&#x5757;&#xFF0C;&#x4ECE;&#x800C;&#x8FDB;&#x884C;&#x4EFF;&#x771F;&#x3002;</p>
+<h1 id="&#x516D;-&#x7F16;&#x5199;&#x4EFF;&#x771F;&#x4EE3;&#x7801;"><a name="&#x516D;-&#x7F16;&#x5199;&#x4EFF;&#x771F;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x516D;-&#x7F16;&#x5199;&#x4EFF;&#x771F;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;. &#x7F16;&#x5199;&#x4EFF;&#x771F;&#x4EE3;&#x7801;</h1>
+<p>&#x5728;simu&#x6A21;&#x5757;&#x4E2D;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x3002;</p>
+<p><code>module simu(</code></p>
+<p><code>)</code></p>
+<p><code>;</code></p>
+<p><code>// testbench &#x65F6;&#x949F;&#x4FE1;&#x53F7;</code></p>
+<p><code>reg clk = 0;</code></p>
+<p><code>always #10 clk &lt;= ~clk;</code></p>
+<p><code>// &#x8F93;&#x51FA;&#x4FE1;&#x53F7;</code></p>
+<p><code>wire out;</code></p>
+<p><code>// &#x8C03;&#x7528;test&#x6A21;&#x5757;</code></p>
+<p><code>test mytest(clk, out);</code></p>
+<pre><code>endmodule
+</code></pre><p>&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>reg clk = 0&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;reg&#x4FE1;&#x53F7;&#xFF0C;&#x5E76;&#x8D4B;&#x521D;&#x503C;&#x4E3A;0&#x3002;</p>
+<p>always #10 clk &lt;= ~clk&#x4E3A;testbench&#x4EE3;&#x7801;&#xFF0C;&#x8BA9;clk&#x6BCF;&#x9694;10ns&#x7FFB;&#x8F6C;&#x4E00;&#x6B21;&#xFF0C;&#x4EA7;&#x751F;&#x5468;&#x671F;&#x4E3A;20ns&#x7684;&#x65F6;&#x949F;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>wire out&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;wire&#x4FE1;&#x53F7;&#xFF0C;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;&#x5230;test&#x6A21;&#x5757;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+<p>test mytest(clk, out)&#x8C03;&#x7528;&#x4E86;&#x524D;&#x9762;&#x5199;&#x597D;&#x7684;test&#x6A21;&#x5757;&#xFF0C;&#x5176;&#x4E2D;mytest&#x662F;&#x6A21;&#x5757;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;clk&#x548C;out&#x5206;&#x522B;&#x8FDE;&#x63A5;&#x4E86;mytest&#x6A21;&#x5757;&#x5185;&#x90E8;&#x7684;in&#x548C;out&#x4FE1;&#x53F7;&#x3002;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x7C7B;&#x4F3C;&#x4E8E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#xFF0C;test&#x4E3A;&#x7C7B;&#x540D;&#xFF0C;&#x800C;mytest&#x4E3A;&#x5BF9;&#x8C61;&#x540D;&#x79F0;&#x3002;&#x540C;&#x6837;&#xFF0C;Verilog&#x4E2D;&#x8C03;&#x7528;&#x6A21;&#x5757;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x4F8B;&#x5316;&#x591A;&#x4E2A;test&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x66F4;&#x591A;Testbench&#x7684;&#x5199;&#x6CD5;&#x8BF7;&#x4E0A;&#x7F51;&#x641C;&#x7D22;&#x76F8;&#x5173;&#x8D44;&#x6599;&#x3002;</p>
+<h1 id="&#x4E03;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;"><a name="&#x4E03;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;" class="anchor-navigation-ex-anchor" href="#&#x4E03;-&#x884C;&#x4E3A;&#x4EFF;&#x771F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;. &#x884C;&#x4E3A;&#x4EFF;&#x771F;</h1>
+<p>&#x53F3;&#x51FB;simu&#x6A21;&#x5757;&#xFF0C;&#x9009;&#x62E9;Set as Top</p>
+<p><img src="../assets/add_simu1_1.png" alt=""></p>
+<p>&#x5C06;simu&#x6A21;&#x5757;&#x8BBE;&#x7F6E;&#x4E3A;&#x4EFF;&#x771F;&#x65F6;&#x7684;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x3002;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x7C7B;&#x4F3C;&#x4E8E;C&#x7F16;&#x7A0B;&#x65F6;&#x7684;&#x5165;&#x53E3;&#x51FD;&#x6570;&#xFF0C;&#x5373;main&#x51FD;&#x6570;&#x3002;main&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x5B50;&#x51FD;&#x6570;&#xFF1B;</p>
+<p>&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x9876;&#x5C42;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x5728;Flow Navigator&#x7A97;&#x53E3;&#x4E2D;&#x70B9;&#x51FB;Run Simulation - Run Behavioral Simulation&#xFF1B;&#x6216;&#x8005;&#x5728;&#x83DC;&#x5355;&#x4E2D;&#x9009;&#x62E9;Flow - Run Simulation - Run Behavioral Simulation&#xFF0C;&#x5373;&#x53EF;&#x542F;&#x52A8;&#x884C;&#x4E3A;&#x4EFF;&#x771F;&#x3002;</p>
+<p><img src="../assets/simu1_1.png" alt=""></p>
+<p>&#x7A0D;&#x540E;Behavioral Simulation&#x7A97;&#x53E3;&#x6253;&#x5F00;&#xFF0C;&#x5373;&#x53EF;&#x770B;&#x5230;&#x8F93;&#x51FA;&#x7684;&#x4EFF;&#x771F;&#x6CE2;&#x5F62;&#x3002;</p>
+<p><img src="../assets/simu4.png" alt=""></p>
+<h1 id="&#x516B;-&#x64CD;&#x4F5C;&#x6280;&#x5DE7;"><a name="&#x516B;-&#x64CD;&#x4F5C;&#x6280;&#x5DE7;" class="anchor-navigation-ex-anchor" href="#&#x516B;-&#x64CD;&#x4F5C;&#x6280;&#x5DE7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516B;. &#x64CD;&#x4F5C;&#x6280;&#x5DE7;</h1>
+<p>&#x53CC;&#x51FB;&#x56FE;&#x4E2D;&#x53F3;&#x4FA7;&#x7684;Untitled 2&#x6807;&#x7B7E;&#xFF0C;&#x53EF;&#x4EE5;&#x6700;&#x5927;&#x5316;&#x4EFF;&#x771F;&#x6CE2;&#x5F62;&#x7A97;&#x53E3;&#x3002;&#x5728;&#x6CE2;&#x5F62;&#x7A97;&#x53E3;&#x6309;&#x4F4F;Ctrl&#x952E;&#x5E76;&#x6EDA;&#x52A8;&#x9F20;&#x6807;&#x6EDA;&#x8F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x6A2A;&#x5411;&#x7F29;&#x653E;&#x6CE2;&#x5F62;&#xFF1B;</p>
+<p>&#x6309;&#x4F4F;Shift&#x5E76;&#x6EDA;&#x52A8;&#x9F20;&#x6807;&#x6EDA;&#x8F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x6A2A;&#x5411;&#x5E73;&#x79FB;&#x6CE2;&#x5F62;&#x3002;</p>
+<p>&#x5982;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;clk&#x4E3A;&#x5468;&#x671F;20ns&#x7684;&#x65F6;&#x949F;&#x4FE1;&#x53F7;&#xFF0C;&#x800C;out&#x548C;clk&#x7684;&#x7535;&#x5E73;&#x59CB;&#x7EC8;&#x76F8;&#x53CD;&#xFF0C;&#x5373;test&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x975E;&#x95E8;&#x5DE5;&#x4F5C;&#x6B63;&#x786E;&#x3002;</p>
+<p><img src="../assets/simu5.png" alt=""></p>
+<p>&#x5728;Behavioral Simulation&#x7A97;&#x53E3;&#x4E2D;&#x7684;Scopes&#x5B50;&#x7A97;&#x53E3;&#xFF0C;&#x6839;&#x636E;&#x6A21;&#x5757;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x9009;&#x4E2D;mytest&#xFF0C;&#x5728;&#x53F3;&#x4FA7;&#x7684;Objects&#x7A97;&#x53E3;&#x5373;&#x53EF;&#x770B;&#x5230;test&#x6A21;&#x5757;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x4FE1;&#x53F7;&#xFF08;&#x5305;&#x62EC;&#x5185;&#x90E8;&#x4FE1;&#x53F7;&#xFF0C;&#x5373;&#x6CA1;&#x6709;&#x5199;&#x5230;&#x6A21;&#x5757;&#x58F0;&#x660E;&#x8BED;&#x53E5;module(a,b,c)&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x4FE1;&#x53F7;&#xFF09;&#x3002;</p>
+<p>&#x53F3;&#x51FB;&#x4FE1;&#x53F7;&#xFF0C;&#x9009;&#x62E9;Add To Wave Window&#xFF0C;&#x53EF;&#x5C06;&#x6CE2;&#x5F62;&#x6DFB;&#x52A0;&#x5230;&#x53F3;&#x4FA7;&#x7684;&#x4EFF;&#x771F;&#x6CE2;&#x5F62;&#x7A97;&#x53E3;&#xFF0C;&#x4FDD;&#x5B58;&#x4EFF;&#x771F;&#x6587;&#x4EF6;&#xFF0C;&#x518D;&#x6B21;&#x4EFF;&#x771F;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;&#x4FE1;&#x53F7;&#x7684;&#x6CE2;&#x5F62;&#x3002;</p>
+<p><img src="../assets/simu6.png" alt=""></p>
+<p>&#x5BF9;&#x4E8E;&#x591A;&#x4F4D;&#x4FE1;&#x53F7;&#x4F8B;&#x5982;wire [7:0] p&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#x663E;&#x793A;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x3002;&#x4F8B;&#x5982;&#x53F3;&#x51FB;&#x9009;&#x62E9;Radix - Unsigned Decimal&#x5373;&#x53EF;&#x8BBE;&#x7F6E;&#x4E3A;&#x65E0;&#x7B26;&#x53F7;&#x5341;&#x8FDB;&#x5236;&#x663E;&#x793A;&#xFF0C;&#x5982;&#x56FE;&#x3002;</p>
+<p><img src="../assets/simu7.png" alt=""></p>
+<p><div id="page-footer" class="localized-footer"><hr><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"></p>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="margin: 5%"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '6677d86cc13c39961dfc',
+    clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+    repo: 'LoongsonCsprj2020',
+    owner: 'xyongcn',
+    admin: ['xyongcn'],
+    createIssueManually: true,
+    id: document.title
+  })
+  gitalk.render('gitalk-container')
+</script>
+<script>
+  require(['gitbook'], function(gitbook) {
+    const gitalk = new Gitalk({
+      clientID: '6677d86cc13c39961dfc',
+      clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+      repo: 'LoongsonCsprj2020',
+      owner: 'xyongcn',
+      admin: ['xyongcn'],
+      createIssueManually: true,
+      id: document.title
+    })
+    gitbook.events.bind('page.change', initMygitalk)
+    function initMygitalk() {
+      gitalk.render('gitalk-container')
+    }
+  })
+</script>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Vivado环境的安装.html" class="navigation navigation-prev " aria-label="Previous page: 2.1.1 Vivado环境的安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vivado和板子的连接.html" class="navigation navigation-next " aria-label="Next page: 2.1.3 Vivado和实验板的连接">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.1.2 Vivado的基本使用","level":"1.2.1.2","depth":3,"next":{"title":"2.1.3 Vivado和实验板的连接","level":"1.2.1.3","depth":3,"path":"cpu/vivado和板子的连接.md","ref":"cpu/vivado和板子的连接.md","articles":[]},"previous":{"title":"2.1.1 Vivado环境的安装","level":"1.2.1.1","depth":3,"path":"cpu/Vivado环境的安装.md","ref":"cpu/Vivado环境的安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","code","search-pro","github","localized-footer","ancre-navigation","-sharing"],"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual"},"search-pro":{},"search":{},"localized-footer":{"filename":"gitbook/comment.html","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"gitbook/website.css"}},"file":{"path":"cpu/Vivado的基本使用.md","mtime":"2019-10-21T03:37:18.994Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T15:22:40.169Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

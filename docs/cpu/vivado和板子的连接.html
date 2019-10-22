@@ -1,0 +1,809 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.1.3 Vivado和实验板的连接 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../gitbook/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="基于soc_up的移植过程.html" />
+    
+    
+    <link rel="prev" href="Vivado的基本使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    1. 简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="实验箱介绍.html">
+            
+                <a href="实验箱介绍.html">
+            
+                    
+                    1.1龙芯实验箱介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="实验箱测试.html">
+            
+                <a href="实验箱测试.html">
+            
+                    
+                    1.2实验箱测试流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. 基于FPGA的MIPS32SCPU实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Vivado开发环境.html">
+            
+                <a href="Vivado开发环境.html">
+            
+                    
+                    2.1 Vivado开发环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="Vivado环境的安装.html">
+            
+                <a href="Vivado环境的安装.html">
+            
+                    
+                    2.1.1 Vivado环境的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="Vivado的基本使用.html">
+            
+                <a href="Vivado的基本使用.html">
+            
+                    
+                    2.1.2 Vivado的基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.3" data-path="vivado和板子的连接.html">
+            
+                <a href="vivado和板子的连接.html">
+            
+                    
+                    2.1.3 Vivado和实验板的连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基于soc_up的移植过程.html">
+            
+                <a href="基于soc_up的移植过程.html">
+            
+                    
+                    2.2 基于soc_up的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="flash烧录方法.html">
+            
+                <a href="flash烧录方法.html">
+            
+                    
+                    2.2.1 Flash的烧录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="FPGA固化方法.html">
+            
+                <a href="FPGA固化方法.html">
+            
+                    
+                    2.2.2 FPGA固化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="串口工具的配置和使用.html">
+            
+                <a href="串口工具的配置和使用.html">
+            
+                    
+                    2.2.3 串口工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="TFTP服务器的搭建和使用.html">
+            
+                <a href="TFTP服务器的搭建和使用.html">
+            
+                    
+                    2.2.4 TFTP服务器的搭建及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="操作系统的移植.html">
+            
+                <a href="操作系统的移植.html">
+            
+                    
+                    2.2.5 Liunx内核的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="ram的初始化.html">
+            
+                <a href="ram的初始化.html">
+            
+                    
+                    2.3 ROM的初始化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="初始化ram的方法.html">
+            
+                <a href="初始化ram的方法.html">
+            
+                    
+                    2.3.1 ROM的初始化过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="测试程序编译环境及流程介绍.html">
+            
+                <a href="测试程序编译环境及流程介绍.html">
+            
+                    
+                    2.3.2  测试程序编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="基于NaiveMIPScpu的启动过程.html">
+            
+                <a href="基于NaiveMIPScpu的启动过程.html">
+            
+                    
+                    2.4 基于NaiveMIPS的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="NavieMIPS的综合运行.html">
+            
+                <a href="NavieMIPS的综合运行.html">
+            
+                    
+                    2.4.1 NavieMIPS的综合运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="监控程序的移植过程.html">
+            
+                <a href="监控程序的移植过程.html">
+            
+                    
+                    2.4.2 supervisor的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="U-Boot启动过程.html">
+            
+                <a href="U-Boot启动过程.html">
+            
+                    
+                    2.4.3 U-Boot的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="ucore的启动过程.html">
+            
+                <a href="ucore的启动过程.html">
+            
+                    
+                    2.4.4 ucore的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="ILA的使用.html">
+            
+                <a href="ILA的使用.html">
+            
+                    
+                    2.5 ILA的使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ucore/">
+            
+                <a href="../ucore/">
+            
+                    
+                    3. MIPS32S CPU上的ucore教学操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ucore/make.html">
+            
+                <a href="../ucore/make.html">
+            
+                    
+                    3.1 make 命令的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ucore/crosstools.html">
+            
+                <a href="../ucore/crosstools.html">
+            
+                    
+                    3.2 交叉工具链介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ucore/交叉编译环境配置.html">
+            
+                <a href="../ucore/交叉编译环境配置.html">
+            
+                    
+                    3.3 交叉编译环境的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ucore/U-Boot移植过程.html">
+            
+                <a href="../ucore/U-Boot移植过程.html">
+            
+                    
+                    3.4 U-Boot的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ucore/qemu.html">
+            
+                <a href="../ucore/qemu.html">
+            
+                    
+                    3.5 QEMU介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ucore/os_comp.html">
+            
+                <a href="../ucore/os_comp.html">
+            
+                    
+                    3.6 ucore编译方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ucore/龙芯编译环境配置.html">
+            
+                <a href="../ucore/龙芯编译环境配置.html">
+            
+                    
+                    3.7 龙芯编译环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ucore/对supervisor交互程序term.py的修改.md">
+            
+                <span>
+            
+                    
+                    3.8 对supervisor交互程序term.py的修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../compiler/">
+            
+                <a href="../compiler/">
+            
+                    
+                    4. MIPS32S上的C0编译器实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../integration/">
+            
+                <a href="../integration/">
+            
+                    
+                    系统集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.1.3 Vivado和实验板的连接</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6253;&#x5F00;hardware manager&#x4EE5;&#x540E;&#xFF0C;&#x60F3;&#x8981;&#x8FDE;&#x63A5;&#x677F;&#x5B50;&#x5374;&#x59CB;&#x7EC8;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x6309;&#x7167;&#x4E00;&#x4E0B;&#x6559;&#x7A0B;&#x5B89;&#x88C5;&#x4E00;&#x4E0B;&#x9A71;&#x52A8;</p>
+<p>&#x5B98;&#x65B9;&#x7ED9;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><a href="https://www.xilinx.com/support/answers/54381.html" target="_blank">https://www.xilinx.com/support/answers/54381.html</a></p>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x6211;&#x7ECF;&#x8FC7;&#x5B9E;&#x6D4B;&#x662F;&#x53EF;&#x884C;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5177;&#x4F53;&#x7684;&#x6B65;&#x9AA4;&#x8981;&#x53D8;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x53D8;&#x4E86;&#x3002;</p>
+<p>&#x6211;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x662F;ubuntu 16.04 LTS &#xFF0C;IDE&#x7248;&#x672C;&#x662F;Vivado 2017.1&#xFF0C;&#x5B98;&#x65B9;&#x7ED9;&#x7684;&#x65B9;&#x6848;&#x5E94;&#x8BE5;&#x662F;&#x9488;&#x5BF9;&#x597D;&#x51E0;&#x4E2A;&#x7248;&#x672C;&#x4EE5;&#x524D;&#x7684;&#xFF0C;&#x624D;&#x4F1A;&#x51FA;&#x73B0;&#x76EE;&#x5F55;&#x5BF9;&#x4E0D;&#x4E0A;&#x7684;&#x60C5;&#x51B5;</p>
+<p>&#x6211;&#x7684;&#x60C5;&#x51B5;&#x662F;</p>
+<p>&#x5C31;&#x50CF;&#x8FD9;&#x6837;auto connect &#x627E;&#x4E0D;&#x5230;&#x6211;&#x7684;&#x677F;&#x5B50;&#xFF0C;&#x6211;&#x4F7F;&#x7528;lsusb&#x547D;&#x4EE4;&#x662F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x7684;usb&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x8BF4;&#x660E;ubuntu&#x77E5;&#x9053;&#x6709;&#x8FD9;&#x4E2A;usb&#x5B58;&#x5728;&#xFF0C;&#x53EA;&#x662F;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x9A71;&#x52A8;&#x5BFC;&#x81F4;&#x8DDF;vivado&#x8FDE;&#x4E0D;&#x4E0A;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x5B98;&#x65B9;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x770B;</p>
+<p>Full sudo -s access</p>
+<p>Run sudo -s</p>
+<p>Go to&lt;Xilinx install&gt;/bin/[lin|lin64] or common/bin/[lin|lin64] in an installed area.</p>
+<p>Copy the install_script directory to /opt.</p>
+<p>Run &quot;./install_drivers&quot; in /opt/install_script/install_drivers.</p>
+<p>Add windrvr6 read/write access by running &quot;chmod 666 /dev/windrvr6&quot;.</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x8FDB;&#x5165;root&#x8D26;&#x6237;&#xFF0C;&#x5BF9;&#xFF0C;&#x4E0D;&#x8FDB;&#x5165;root&#x662F;&#x64CD;&#x4F5C;&#x4E0D;&#x4E86;&#x7684;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x6B65;&#x662F;&#x8FDB;&#x5165;vivado&#x7684;&#x5B89;&#x88C5;&#x6587;&#x4EF6;&#x4E0B;&#x7684;bin/[lin | lin64]</p>
+<p>&#x554A;&#xFF0C;&#x5BF9;&#x4E0D;&#x8D77;&#xFF0C;&#x6211;&#x7684;bin&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x3002;</p>
+<p>&#x600E;&#x4E48;&#x529E;&#x5462;</p>
+<p>&#x4F60;&#x770B;&#x4E0B;&#x4E00;&#x6761;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x4EFB;&#x52A1;&#x662F;&#x4E3A;&#x4E86;&#x5BFB;&#x627E;&#x4E00;&#x4E2A;&#x53EB;&#x505A; &#x201C; install_script &#x201D; &#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x641C;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;install_script</p>
+<p>&#x7136;&#x540E;&#x5C31;</p>
+<p>&#x627E;&#x5230;&#x4E86;&#x5B83;&#xFF0C;&#x539F;&#x6765;&#x653E;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x4E0D;&#x662F;bin&#xFF0C;&#x800C;&#x662F;SDK&#x7684;data&#x3002;&#x3002;&#x3002;</p>
+<p>&#x7EE7;&#x7EED;&#x7B2C;&#x4E09;&#x6B65;&#xFF0C;&#x590D;&#x5236;&#x5230;/opt</p>
+<p>&#x56E0;&#x4E3A;&#x73B0;&#x5728;&#x662F;root&#x6240;&#x4EE5;&#x4E0D;&#x7528;sudo&#xFF0C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>cd ~/opt/pkg/vivado/SDK/2016.4/data/xicom/cable_drivers/lin64
+</code></pre><pre><code>cp -i -r install_script /opt
+</code></pre><p>&#x6211;&#x7684;vivado&#x5B89;&#x88C5;&#x5728; ~/opt/pkg/vivado  &#x4F60;&#x7684;&#x81EA;&#x5DF1;&#x6539;&#x3002;&#x56E0;&#x4E3A;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x540E;&#x9762;&#x4E5F;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x4F60;&#x4E5F;&#x8981;&#x8BB0;&#x5F97;&#x6309;&#x7167;&#x4F60;&#x7684;&#x7248;&#x672C;&#x7684;&#x771F;&#x5B9E;&#x8DEF;&#x5F84;&#x6765;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x590D;&#x5236;&#x5B8C;&#x4E86;&#xFF0C;&#x7B2C;&#x56DB;&#x6B65;</p>
+<pre><code>cd /opt/install_script/install_drivers
+</code></pre><pre><code>./install_drivers
+</code></pre><p>&#x91CD;&#x7533;&#xFF0C;&#x5FC5;&#x987B;&#x662F;root&#x8D26;&#x6237;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#x6BCF;&#x4E00;&#x6761;sh&#x6307;&#x4EE4;&#x524D;&#x9762;&#x5FC5;&#x987B;&#x662F;#&#x800C;&#x4E0D;&#x662F;@ </p>
+<p>&#x5230;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;&#x53CD;&#x6B63;&#x6211;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x6211;&#x7684;&#x677F;&#x5B50;&#x4E86;&#xFF0C;&#x7B2C;&#x4E94;&#x6B65;&#x561B;&#x3002;&#x3002;&#x3002;&#x6211;&#x627E;&#x4E0D;&#x5230;&#x90A3;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x3002;&#x3002;&#x6240;&#x4EE5;&#x4E5F;&#x5C31;&#x6CA1;&#x6CD5;&#x5BF9;&#x5B83;chmod&#x4E86;</p>
+<p>&#x8BF4;&#x771F;&#x7684;&#xFF0C;&#x6211;&#x641C;&#x4E86;&#x5168;&#x76D8;&#xFF0C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x540D;&#x5B57;&#x662F; &#x201C; wind &#x201D; &#x5F00;&#x5934;&#x7684;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#x80FD;&#x7528;&#x4E86;&#xFF0C;&#x7BA1;&#x4ED6;&#x5462;&#x3002;</p>
+<p><div id="page-footer" class="localized-footer"><hr><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"></p>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="margin: 5%"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '6677d86cc13c39961dfc',
+    clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+    repo: 'LoongsonCsprj2020',
+    owner: 'xyongcn',
+    admin: ['xyongcn'],
+    createIssueManually: true,
+    id: document.title
+  })
+  gitalk.render('gitalk-container')
+</script>
+<script>
+  require(['gitbook'], function(gitbook) {
+    const gitalk = new Gitalk({
+      clientID: '6677d86cc13c39961dfc',
+      clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+      repo: 'LoongsonCsprj2020',
+      owner: 'xyongcn',
+      admin: ['xyongcn'],
+      createIssueManually: true,
+      id: document.title
+    })
+    gitbook.events.bind('page.change', initMygitalk)
+    function initMygitalk() {
+      gitalk.render('gitalk-container')
+    }
+  })
+</script>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Vivado的基本使用.html" class="navigation navigation-prev " aria-label="Previous page: 2.1.2 Vivado的基本使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="基于soc_up的移植过程.html" class="navigation navigation-next " aria-label="Next page: 2.2 基于soc_up的移植过程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.1.3 Vivado和实验板的连接","level":"1.2.1.3","depth":3,"next":{"title":"2.2 基于soc_up的移植过程","level":"1.2.2","depth":2,"path":"cpu/基于soc_up的移植过程.md","ref":"cpu/基于soc_up的移植过程.md","articles":[{"title":"2.2.1 Flash的烧录","level":"1.2.2.1","depth":3,"path":"cpu/flash烧录方法.md","ref":"cpu/flash烧录方法.md","articles":[]},{"title":"2.2.2 FPGA固化方法","level":"1.2.2.2","depth":3,"path":"cpu/FPGA固化方法.md","ref":"cpu/FPGA固化方法.md","articles":[]},{"title":"2.2.3 串口工具的使用","level":"1.2.2.3","depth":3,"path":"cpu/串口工具的配置和使用.md","ref":"cpu/串口工具的配置和使用.md","articles":[]},{"title":"2.2.4 TFTP服务器的搭建及使用","level":"1.2.2.4","depth":3,"path":"cpu/TFTP服务器的搭建和使用.md","ref":"cpu/TFTP服务器的搭建和使用.md","articles":[]},{"title":"2.2.5 Liunx内核的移植过程","level":"1.2.2.5","depth":3,"path":"cpu/操作系统的移植.md","ref":"cpu/操作系统的移植.md","articles":[]}]},"previous":{"title":"2.1.2 Vivado的基本使用","level":"1.2.1.2","depth":3,"path":"cpu/Vivado的基本使用.md","ref":"cpu/Vivado的基本使用.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","code","search-pro","github","localized-footer","ancre-navigation","-sharing"],"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual"},"search-pro":{},"search":{},"localized-footer":{"filename":"gitbook/comment.html","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"gitbook/website.css"}},"file":{"path":"cpu/vivado和板子的连接.md","mtime":"2019-10-21T03:37:18.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T15:22:40.169Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

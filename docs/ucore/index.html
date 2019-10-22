@@ -1,0 +1,792 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. MIPS32S CPU上的ucore教学操作系统 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../gitbook/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="make.html" />
+    
+    
+    <link rel="prev" href="../cpu/ILA的使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    1. 简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../cpu/实验箱介绍.html">
+            
+                <a href="../cpu/实验箱介绍.html">
+            
+                    
+                    1.1龙芯实验箱介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../cpu/实验箱测试.html">
+            
+                <a href="../cpu/实验箱测试.html">
+            
+                    
+                    1.2实验箱测试流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../cpu/">
+            
+                <a href="../cpu/">
+            
+                    
+                    2. 基于FPGA的MIPS32SCPU实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../cpu/Vivado开发环境.html">
+            
+                <a href="../cpu/Vivado开发环境.html">
+            
+                    
+                    2.1 Vivado开发环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../cpu/Vivado环境的安装.html">
+            
+                <a href="../cpu/Vivado环境的安装.html">
+            
+                    
+                    2.1.1 Vivado环境的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../cpu/Vivado的基本使用.html">
+            
+                <a href="../cpu/Vivado的基本使用.html">
+            
+                    
+                    2.1.2 Vivado的基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../cpu/vivado和板子的连接.html">
+            
+                <a href="../cpu/vivado和板子的连接.html">
+            
+                    
+                    2.1.3 Vivado和实验板的连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../cpu/基于soc_up的移植过程.html">
+            
+                <a href="../cpu/基于soc_up的移植过程.html">
+            
+                    
+                    2.2 基于soc_up的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../cpu/flash烧录方法.html">
+            
+                <a href="../cpu/flash烧录方法.html">
+            
+                    
+                    2.2.1 Flash的烧录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../cpu/FPGA固化方法.html">
+            
+                <a href="../cpu/FPGA固化方法.html">
+            
+                    
+                    2.2.2 FPGA固化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../cpu/串口工具的配置和使用.html">
+            
+                <a href="../cpu/串口工具的配置和使用.html">
+            
+                    
+                    2.2.3 串口工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../cpu/TFTP服务器的搭建和使用.html">
+            
+                <a href="../cpu/TFTP服务器的搭建和使用.html">
+            
+                    
+                    2.2.4 TFTP服务器的搭建及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../cpu/操作系统的移植.html">
+            
+                <a href="../cpu/操作系统的移植.html">
+            
+                    
+                    2.2.5 Liunx内核的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../cpu/ram的初始化.html">
+            
+                <a href="../cpu/ram的初始化.html">
+            
+                    
+                    2.3 ROM的初始化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../cpu/初始化ram的方法.html">
+            
+                <a href="../cpu/初始化ram的方法.html">
+            
+                    
+                    2.3.1 ROM的初始化过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../cpu/测试程序编译环境及流程介绍.html">
+            
+                <a href="../cpu/测试程序编译环境及流程介绍.html">
+            
+                    
+                    2.3.2  测试程序编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../cpu/基于NaiveMIPScpu的启动过程.html">
+            
+                <a href="../cpu/基于NaiveMIPScpu的启动过程.html">
+            
+                    
+                    2.4 基于NaiveMIPS的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../cpu/NavieMIPS的综合运行.html">
+            
+                <a href="../cpu/NavieMIPS的综合运行.html">
+            
+                    
+                    2.4.1 NavieMIPS的综合运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../cpu/监控程序的移植过程.html">
+            
+                <a href="../cpu/监控程序的移植过程.html">
+            
+                    
+                    2.4.2 supervisor的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../cpu/U-Boot启动过程.html">
+            
+                <a href="../cpu/U-Boot启动过程.html">
+            
+                    
+                    2.4.3 U-Boot的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../cpu/ucore的启动过程.html">
+            
+                <a href="../cpu/ucore的启动过程.html">
+            
+                    
+                    2.4.4 ucore的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../cpu/ILA的使用.html">
+            
+                <a href="../cpu/ILA的使用.html">
+            
+                    
+                    2.5 ILA的使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3. MIPS32S CPU上的ucore教学操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="make.html">
+            
+                <a href="make.html">
+            
+                    
+                    3.1 make 命令的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="crosstools.html">
+            
+                <a href="crosstools.html">
+            
+                    
+                    3.2 交叉工具链介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="交叉编译环境配置.html">
+            
+                <a href="交叉编译环境配置.html">
+            
+                    
+                    3.3 交叉编译环境的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="U-Boot移植过程.html">
+            
+                <a href="U-Boot移植过程.html">
+            
+                    
+                    3.4 U-Boot的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="qemu.html">
+            
+                <a href="qemu.html">
+            
+                    
+                    3.5 QEMU介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="os_comp.html">
+            
+                <a href="os_comp.html">
+            
+                    
+                    3.6 ucore编译方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="龙芯编译环境配置.html">
+            
+                <a href="龙芯编译环境配置.html">
+            
+                    
+                    3.7 龙芯编译环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="对supervisor交互程序term.py的修改.md">
+            
+                <span>
+            
+                    
+                    3.8 对supervisor交互程序term.py的修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../compiler/">
+            
+                <a href="../compiler/">
+            
+                    
+                    4. MIPS32S上的C0编译器实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../integration/">
+            
+                <a href="../integration/">
+            
+                    
+                    系统集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3. MIPS32S CPU上的ucore教学操作系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#mips32s-cpu&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"><b></b>MIPS32S CPU&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x4ECB;&#x7ECD;"><b></b>&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#soc"><b></b>SoC</a></li><li><span class="title-icon "></span><a href="#qemu&#x6A21;&#x62DF;&#x5668;"><b></b>qemu&#x6A21;&#x62DF;&#x5668;</a></li><li><span class="title-icon "></span><a href="#ucore&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;"><b></b>ucore&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#ucore&#x5B9E;&#x73B0;&#x5206;&#x6790;"><b></b>ucore&#x5B9E;&#x73B0;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#ucore&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5206;&#x6790;"><b></b>ucore&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5206;&#x6790;</a></li></ul></ul></div><a href="#mips32s-cpu&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mips32s-cpu&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"><a name="mips32s-cpu&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#mips32s-cpu&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>MIPS32S CPU&#x4E0A;&#x7684;ucore&#x6559;&#x5B66;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</h1>
+<p><a href="https://github.com/xyongcn/LoongsonCsprj2017#&#x9F99;&#x82AF;fpga&#x5B9E;&#x9A8C;&#x677F;&#x4E0A;&#x7684;ucore&#x53C2;&#x8003;&#x5B9E;&#x73B0;" target="_blank">&#x53C2;&#x8003;&#x94FE;&#x63A5;</a></p>
+<h2 id="&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x4ECB;&#x7ECD;"><a name="&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;&#x4ECB;&#x7ECD;</h2>
+<p>&#x5728;ucore&#x7684;&#x5F00;&#x53D1;&#x4E0E;&#x8C03;&#x8BD5;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;GNU&#x5DE5;&#x5177;&#x94FE;&#xFF0C;&#x5305;&#x62EC;GNU make, GNU Binutils, GCC&#x4EE5;&#x53CA;GDB&#x3002;</p>
+<p><a href="make.html">GNU make</a>
+<a href="crosstools.html">&#x4EA4;&#x53C9;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#x94FE;</a></p>
+<h2 id="soc"><a name="soc" class="anchor-navigation-ex-anchor" href="#soc"><i class="fa fa-link" aria-hidden="true"></i></a>SoC</h2>
+<p><a href="https://github.com/xyongcn/LoongsonCsprj2017/blob/master/doc/soc_lite%E5%92%8Csoc_up%E4%BB%8B%E7%BB%8D_v0.01.pdf" target="_blank">SoC_up</a></p>
+<p><a href="https://github.com/z4yx/NaiveMIPS-HDL/blob/brd-NSCSCC/documentation/2017nscscc.pdf" target="_blank">NaiveMIPS (&#x6216;nscscc)</a></p>
+<p>&#x4E0D;&#x540C;&#x7684;SoC&#x5177;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x786C;&#x4EF6;&#x7ED3;&#x6784;&#xFF0C;&#x56E0;&#x6B64;&#x7F16;&#x8BD1;&#x5B8C;&#x6210;&#x7684;&#x8F6F;&#x4EF6;&#x5728;&#x4E0D;&#x540C;SoC&#x5E73;&#x53F0;&#x4E0A;&#x5E76;&#x4E0D;&#x901A;&#x7528;&#x3002;</p>
+<h2 id="qemu&#x6A21;&#x62DF;&#x5668;"><a name="qemu&#x6A21;&#x62DF;&#x5668;" class="anchor-navigation-ex-anchor" href="#qemu&#x6A21;&#x62DF;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>qemu&#x6A21;&#x62DF;&#x5668;</h2>
+<p><a href="qemu.html">QEMU</a></p>
+<h2 id="ucore&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;"><a name="ucore&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#ucore&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>ucore&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;</h2>
+<p><a href="os_comp.html">&#x7F16;&#x8BD1;&#x65B9;&#x6CD5;</a></p>
+<h2 id="ucore&#x5B9E;&#x73B0;&#x5206;&#x6790;"><a name="ucore&#x5B9E;&#x73B0;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#ucore&#x5B9E;&#x73B0;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>ucore&#x5B9E;&#x73B0;&#x5206;&#x6790;</h2>
+<h2 id="ucore&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5206;&#x6790;"><a name="ucore&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#ucore&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>ucore&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x5206;&#x6790;</h2>
+<p><div id="page-footer" class="localized-footer"><hr><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"></p>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="margin: 5%"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '6677d86cc13c39961dfc',
+    clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+    repo: 'LoongsonCsprj2020',
+    owner: 'xyongcn',
+    admin: ['xyongcn'],
+    createIssueManually: true,
+    id: document.title
+  })
+  gitalk.render('gitalk-container')
+</script>
+<script>
+  require(['gitbook'], function(gitbook) {
+    const gitalk = new Gitalk({
+      clientID: '6677d86cc13c39961dfc',
+      clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+      repo: 'LoongsonCsprj2020',
+      owner: 'xyongcn',
+      admin: ['xyongcn'],
+      createIssueManually: true,
+      id: document.title
+    })
+    gitbook.events.bind('page.change', initMygitalk)
+    function initMygitalk() {
+      gitalk.render('gitalk-container')
+    }
+  })
+</script>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../cpu/ILA的使用.html" class="navigation navigation-prev " aria-label="Previous page: 2.5 ILA的使用方法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="make.html" class="navigation navigation-next " aria-label="Next page: 3.1 make 命令的使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. MIPS32S CPU上的ucore教学操作系统","level":"1.3","depth":1,"next":{"title":"3.1 make 命令的使用","level":"1.3.1","depth":2,"path":"ucore/make.md","ref":"ucore/make.md","articles":[]},"previous":{"title":"2.5 ILA的使用方法","level":"1.2.5","depth":2,"path":"cpu/ILA的使用.md","ref":"cpu/ILA的使用.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","code","search-pro","github","localized-footer","ancre-navigation","-sharing"],"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual"},"search-pro":{},"search":{},"localized-footer":{"filename":"gitbook/comment.html","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"gitbook/website.css"}},"file":{"path":"ucore/README.md","mtime":"2019-10-21T03:37:18.997Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T15:22:40.169Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

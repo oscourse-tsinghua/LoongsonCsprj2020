@@ -1,0 +1,809 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.3.1 ROM的初始化过程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../gitbook/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="测试程序编译环境及流程介绍.html" />
+    
+    
+    <link rel="prev" href="ram的初始化.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    1. 简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="实验箱介绍.html">
+            
+                <a href="实验箱介绍.html">
+            
+                    
+                    1.1龙芯实验箱介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="实验箱测试.html">
+            
+                <a href="实验箱测试.html">
+            
+                    
+                    1.2实验箱测试流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. 基于FPGA的MIPS32SCPU实现
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Vivado开发环境.html">
+            
+                <a href="Vivado开发环境.html">
+            
+                    
+                    2.1 Vivado开发环境
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="Vivado环境的安装.html">
+            
+                <a href="Vivado环境的安装.html">
+            
+                    
+                    2.1.1 Vivado环境的安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="Vivado的基本使用.html">
+            
+                <a href="Vivado的基本使用.html">
+            
+                    
+                    2.1.2 Vivado的基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="vivado和板子的连接.html">
+            
+                <a href="vivado和板子的连接.html">
+            
+                    
+                    2.1.3 Vivado和实验板的连接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基于soc_up的移植过程.html">
+            
+                <a href="基于soc_up的移植过程.html">
+            
+                    
+                    2.2 基于soc_up的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="flash烧录方法.html">
+            
+                <a href="flash烧录方法.html">
+            
+                    
+                    2.2.1 Flash的烧录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="FPGA固化方法.html">
+            
+                <a href="FPGA固化方法.html">
+            
+                    
+                    2.2.2 FPGA固化方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="串口工具的配置和使用.html">
+            
+                <a href="串口工具的配置和使用.html">
+            
+                    
+                    2.2.3 串口工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="TFTP服务器的搭建和使用.html">
+            
+                <a href="TFTP服务器的搭建和使用.html">
+            
+                    
+                    2.2.4 TFTP服务器的搭建及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="操作系统的移植.html">
+            
+                <a href="操作系统的移植.html">
+            
+                    
+                    2.2.5 Liunx内核的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="ram的初始化.html">
+            
+                <a href="ram的初始化.html">
+            
+                    
+                    2.3 ROM的初始化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.3.1" data-path="初始化ram的方法.html">
+            
+                <a href="初始化ram的方法.html">
+            
+                    
+                    2.3.1 ROM的初始化过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="测试程序编译环境及流程介绍.html">
+            
+                <a href="测试程序编译环境及流程介绍.html">
+            
+                    
+                    2.3.2  测试程序编译流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="基于NaiveMIPScpu的启动过程.html">
+            
+                <a href="基于NaiveMIPScpu的启动过程.html">
+            
+                    
+                    2.4 基于NaiveMIPS的移植过程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="NavieMIPS的综合运行.html">
+            
+                <a href="NavieMIPS的综合运行.html">
+            
+                    
+                    2.4.1 NavieMIPS的综合运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="监控程序的移植过程.html">
+            
+                <a href="监控程序的移植过程.html">
+            
+                    
+                    2.4.2 supervisor的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="U-Boot启动过程.html">
+            
+                <a href="U-Boot启动过程.html">
+            
+                    
+                    2.4.3 U-Boot的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="ucore的启动过程.html">
+            
+                <a href="ucore的启动过程.html">
+            
+                    
+                    2.4.4 ucore的启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="ILA的使用.html">
+            
+                <a href="ILA的使用.html">
+            
+                    
+                    2.5 ILA的使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ucore/">
+            
+                <a href="../ucore/">
+            
+                    
+                    3. MIPS32S CPU上的ucore教学操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ucore/make.html">
+            
+                <a href="../ucore/make.html">
+            
+                    
+                    3.1 make 命令的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ucore/crosstools.html">
+            
+                <a href="../ucore/crosstools.html">
+            
+                    
+                    3.2 交叉工具链介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ucore/交叉编译环境配置.html">
+            
+                <a href="../ucore/交叉编译环境配置.html">
+            
+                    
+                    3.3 交叉编译环境的配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ucore/U-Boot移植过程.html">
+            
+                <a href="../ucore/U-Boot移植过程.html">
+            
+                    
+                    3.4 U-Boot的移植过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../ucore/qemu.html">
+            
+                <a href="../ucore/qemu.html">
+            
+                    
+                    3.5 QEMU介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../ucore/os_comp.html">
+            
+                <a href="../ucore/os_comp.html">
+            
+                    
+                    3.6 ucore编译方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../ucore/龙芯编译环境配置.html">
+            
+                <a href="../ucore/龙芯编译环境配置.html">
+            
+                    
+                    3.7 龙芯编译环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../ucore/对supervisor交互程序term.py的修改.md">
+            
+                <span>
+            
+                    
+                    3.8 对supervisor交互程序term.py的修改
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../compiler/">
+            
+                <a href="../compiler/">
+            
+                    
+                    4. MIPS32S上的C0编译器实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../integration/">
+            
+                <a href="../integration/">
+            
+                    
+                    系统集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.3.1 ROM的初始化过程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="1-&#x6DFB;&#x52A0;&#x5185;&#x6838;ip"><a name="1-&#x6DFB;&#x52A0;&#x5185;&#x6838;ip" class="anchor-navigation-ex-anchor" href="#1-&#x6DFB;&#x52A0;&#x5185;&#x6838;ip"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6DFB;&#x52A0;&#x5185;&#x6838;IP</h2>
+<p>&#x70B9;&#x51FB;Flow Navigator&#x4E2D;&#x7684;IP Catalog&#xFF0C;&#x6253;&#x5F00;&#x7A97;&#x53E3;&#x6DFB;&#x52A0;IP&#x6838;</p>
+<p>&#x641C;&#x7D22; ram&#x6A21;&#x5757;&#xFF0C;&#x51FA;&#x73B0;&#x5982;&#x4E0B;</p>
+<p><img src="../assets/ram1.png" alt=""></p>
+<h3 id="&#x9009;&#x62E9;distributed-memory-generator&#x548C;block-memorygenerator&#x6807;&#x51C6;&#xFF1A;"><a name="&#x9009;&#x62E9;distributed-memory-generator&#x548C;block-memorygenerator&#x6807;&#x51C6;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x9009;&#x62E9;distributed-memory-generator&#x548C;block-memorygenerator&#x6807;&#x51C6;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9009;&#x62E9;distributed memory generator&#x548C;block memorygenerator&#x6807;&#x51C6;&#xFF1A;</h3>
+<p>dram&#x548C;bram&#x5DEE;&#x522B;&#xFF1A;</p>
+<pre><code>1&#x3001;bram &#x7684;&#x8F93;&#x51FA;&#x987B;&#x8981;&#x65F6;&#x949F;&#xFF0C;dram&#x5728;&#x7ED9;&#x51FA;&#x5730;&#x5740;&#x540E;&#x65E2;&#x53EF;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x3002;
+
+2&#x3001;bram&#x6709;&#x8F83;&#x5927;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3002;&#x662F;fpga&#x5B9A;&#x5236;&#x7684;ram&#x8D44;&#x6E90;&#xFF1B;&#x800C;dram&#x662F;&#x903B;&#x8F91;&#x5355;&#x5143;&#x62FC;&#x51FA;&#x6765;&#x7684;&#x3002;&#x6D6A;&#x8D39;LUT&#x8D44;&#x6E90;
+
+3&#x3001;dram&#x4F7F;&#x7528;&#x66F4;&#x7075;&#x6D3B;&#x65B9;&#x4FBF;&#x4E9B;
+</code></pre><p>&#x8865;&#x5145;&#xFF1A;</p>
+<p>&#x5728;Xilinx Asynchronous FIFO CORE&#x7684;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x6709;&#x4E24;&#x79CD;RAM&#x53EF;&#x4F9B;&#x9009;&#x62E9;&#xFF0C;Block memory&#x548C;Distributed memory&#x3002;</p>
+<p>&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x524D;&#x8005;&#x662F;&#x4F7F;&#x7528;FPGA&#x4E2D;&#x7684;&#x6574;&#x5757;&#x53CC;&#x53E3;RAM&#x8D44;&#x6E90;&#xFF0C;&#x800C;&#x540E;&#x8005;&#x5219;&#x662F;&#x62FC;&#x51D1;&#x8D77;FPGA&#x4E2D;&#x7684;&#x67E5;&#x627E;&#x8868;&#x5F62;&#x6210;&#x3002;</p>
+<p>1&#x3001;&#x8F83;&#x5927;&#x7684;&#x5B58;&#x50A8;&#x5E94;&#x7528;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528;bram&#xFF1B;&#x96F6;&#x661F;&#x7684;&#x5C0F;ram&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x7528;dram&#x3002;&#x4F46;&#x8FD9;&#x4EC5;&#x4EC5;&#x662F;&#x4E2A;&#x4E00;&#x822C;&#x539F;&#x5219;&#xFF0C;&#x8BE6;&#x7EC6;&#x7684;&#x4F7F;&#x7528;&#x5F97;&#x770B;&#x6574;&#x4E2A;&#x8BBE;&#x8BA1;&#x4E2D;&#x8D44;&#x6E90;&#x7684;&#x5197;&#x4F59;&#x5EA6;&#x548C;&#x6027;&#x80FD;&#x8981;&#x6C42;</p>
+<p>2&#x3001;dram&#x80FD;&#x591F;&#x662F;&#x7EAF;&#x7EC4;&#x5408;&#x903B;&#x8F91;&#xFF0C;&#x5373;&#x7ED9;&#x51FA;&#x5730;&#x5740;&#x7ACB;&#x5373;&#x51FA;&#x6570;&#x636E;&#x3002;&#x4E5F;&#x80FD;&#x591F;&#x52A0;&#x4E0A;register&#x53D8;&#x6210;&#x6709;&#x65F6;&#x949F;&#x7684;ram&#x3002;&#x800C;bram&#x4E00;&#x5B9A;&#x662F;&#x6709;&#x65F6;&#x949F;&#x7684;&#x3002;</p>
+<p>3&#x3001;&#x5047;&#x8BBE;&#x8981;&#x4EA7;&#x751F;&#x5927;&#x7684;FIFO&#x6216;timing&#x8981;&#x6C42;&#x8F83;&#x9AD8;&#xFF0C;&#x5C31;&#x7528;BlockRAM&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5C31;&#x80FD;&#x591F;&#x7528;Distributed RAM&#x3002;</p>
+<p>Block RAM&#x662F;&#x6BD4;&#x8F83;&#x5927;&#x5757;&#x7684;RAM&#x3002;&#x5373;&#x4F7F;&#x7528;&#x4E86;&#x5B83;&#x7684;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;Block RAM&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x7528;&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x3002;&#x5F53;&#x8981;&#x7528;&#x7684;RAM&#x662F;&#x5C0F;&#x7684;&#x3002;&#x65F6;&#x5E8F;&#x8981;&#x6C42;&#x4E0D;&#x9AD8;&#x7684;&#x8981;&#x7528;Distributed RAM&#x3002;&#x8282;&#x7701;&#x8D44;&#x6E90;&#x3002;</p>
+<p>FPGA&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x4F4D;&#x7F6E;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x6BD4;&#x5982;bram&#x5C31;&#x662F;&#x4E00;&#x5217;&#x4E00;&#x5217;&#x5206;&#x5E03;&#x7684;&#x3002;&#x8FD9;&#x5C31;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x7528;&#x6237;&#x903B;&#x8F91;&#x548C;bram&#x4E4B;&#x95F4;&#x7684;route&#x5EF6;&#x65F6;&#x6BD4;&#x8F83;&#x957F;&#x3002;&#x4E3E;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x6837;&#x4F8B;&#xFF0C;&#x5728;&#x5927;&#x89C4;&#x6A21;FPGA&#x4E2D;&#xFF0C;&#x5047;&#x8BBE;&#x7528;&#x5149;&#x5168;&#x90E8;&#x7684;bram&#x3002;&#x6027;&#x80FD;&#x901A;&#x5E38;&#x4F1A;&#x4E0B;&#x964D;&#xFF0C;&#x751A;&#x81F3;&#x51FA;&#x73B0;route&#x4E0D;&#x901A;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#x3002;</p>
+<h2 id="2-&#x8BBE;&#x7F6E;&#x53C2;&#x6570;"><a name="2-&#x8BBE;&#x7F6E;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#2-&#x8BBE;&#x7F6E;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x8BBE;&#x7F6E;&#x53C2;&#x6570;</h2>
+<p>Component Name&#xFF1A;&#x751F;&#x6210;&#x7684;IP&#x6838;&#x6A21;&#x5757;&#x540D;</p>
+<p>Depth&#xFF1A;&#x5B58;&#x50A8;&#x6DF1;&#x5EA6;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x70B9;&#x6570;&#x76EE;</p>
+<p>DataWidth&#xFF1A;&#x6570;&#x636E;&#x4F4D;&#x5BBD;&#xFF0C;&#x5373;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x70B9;&#x7684;&#x4F4D;&#x6570;</p>
+<p>Memory Type&#xFF1A;ROM&#xFF0C;&#x5355;&#x53E3;RAM&#xFF0C;&#x7B80;&#x5316;&#x7684;&#x53CC;&#x53E3;RAM&#xFF08;&#x4E00;&#x7AEF;&#x8BFB;&#x4E00;&#x7AEF;&#x5199;&#xFF09;&#xFF0C;&#x771F;&#x53CC;&#x53E3;RAM&#xFF08;&#x4E24;&#x7AEF;&#x90FD;&#x53EF;&#x8BFB;&#x5199;&#xFF09;</p>
+<p>&#x82E5;&#x9009;&#x62E9;dram &#x51FA;&#x73B0;&#x5982;&#x4E0B;</p>
+<p><img src="../assets/ram2.png" alt=""></p>
+<p><img src="../assets/ram3.png" alt=""></p>
+<p>&#x82E5;&#x9009;&#x62E9;bram &#x51FA;&#x73B0;&#x5982;&#x4E0B;</p>
+<p><img src="../assets/ram4.png" alt=""></p>
+<p><img src="../assets/ram5.png" alt=""></p>
+<h2 id="3-rom&#x7684;&#x521D;&#x59CB;&#x5316;"><a name="3-rom&#x7684;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#3-rom&#x7684;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>3. ROM&#x7684;&#x521D;&#x59CB;&#x5316;</h2>
+<p>&#x5C06;&#x7F16;&#x5199;&#x597D;&#x7684;&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x94FE;&#x63A5;&#x751F;&#x6210;coe&#x6587;&#x4EF6;&#xFF08;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x89C1;2.3.2&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x6D41;&#x7A0B;&#xFF09;&#x7ED9;ROM&#x8F93;&#x5165;&#x521D;&#x503C;&#xFF0C;COE&#x6587;&#x4EF6;&#x6700;&#x540E;&#x4F1A;&#x751F;&#x6210;MIF&#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x521D;&#x59CB;&#x5316;ROM&#xFF0C;&#x82E5;&#x53EA;&#x7528;&#x4E8E;&#x4EFF;&#x771F;&#x53EF;&#x4EE5;&#x4EC5;&#x66FF;&#x6362;mif&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x3002;</p>
+<p><div id="page-footer" class="localized-footer"><hr><p><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"></p>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container" style="margin: 5%"></div>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '6677d86cc13c39961dfc',
+    clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+    repo: 'LoongsonCsprj2020',
+    owner: 'xyongcn',
+    admin: ['xyongcn'],
+    createIssueManually: true,
+    id: document.title
+  })
+  gitalk.render('gitalk-container')
+</script>
+<script>
+  require(['gitbook'], function(gitbook) {
+    const gitalk = new Gitalk({
+      clientID: '6677d86cc13c39961dfc',
+      clientSecret: 'cc6e7687c25bfb4fd534977ee8d5ca38857ef8c6',
+      repo: 'LoongsonCsprj2020',
+      owner: 'xyongcn',
+      admin: ['xyongcn'],
+      createIssueManually: true,
+      id: document.title
+    })
+    gitbook.events.bind('page.change', initMygitalk)
+    function initMygitalk() {
+      gitalk.render('gitalk-container')
+    }
+  })
+</script>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ram的初始化.html" class="navigation navigation-prev " aria-label="Previous page: 2.3 ROM的初始化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="测试程序编译环境及流程介绍.html" class="navigation navigation-next " aria-label="Next page: 2.3.2  测试程序编译流程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.3.1 ROM的初始化过程","level":"1.2.3.1","depth":3,"next":{"title":"2.3.2  测试程序编译流程","level":"1.2.3.2","depth":3,"path":"cpu/测试程序编译环境及流程介绍.md","ref":"cpu/测试程序编译环境及流程介绍.md","articles":[]},"previous":{"title":"2.3 ROM的初始化","level":"1.2.3","depth":2,"path":"cpu/ram的初始化.md","ref":"cpu/ram的初始化.md","articles":[{"title":"2.3.1 ROM的初始化过程","level":"1.2.3.1","depth":3,"path":"cpu/初始化ram的方法.md","ref":"cpu/初始化ram的方法.md","articles":[]},{"title":"2.3.2  测试程序编译流程","level":"1.2.3.2","depth":3,"path":"cpu/测试程序编译环境及流程介绍.md","ref":"cpu/测试程序编译环境及流程介绍.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["chapter-fold","code","search-pro","github","localized-footer","ancre-navigation","-sharing"],"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual"},"search-pro":{},"search":{},"localized-footer":{"filename":"gitbook/comment.html","hline":"true"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"gitbook/website.css"}},"file":{"path":"cpu/初始化ram的方法.md","mtime":"2019-10-21T03:37:18.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-22T15:22:40.169Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
