@@ -10,7 +10,7 @@
   ],
   "pluginsConfig": {
     "github": {
-      "url": "https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual"
+      "url": "https://oscourse-tsinghua.github.io/LoongsonCsprj2020"
     },
     "localized-footer": {
       "filename": "gitbook/comment.html"
