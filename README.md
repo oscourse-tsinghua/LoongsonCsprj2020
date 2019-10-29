@@ -12,9 +12,8 @@
 相关参考信息链接：
 
  * [wiki](http://os.cs.tsinghua.edu.cn/oscourse/project/LoongsonCsprj2020)
- * [gitbook](https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual/)
+ * [gitbook.io](https://oscourse-tsinghua.gitbook.io/loongsoncsprj2020-manual/)
+ * [github.io](https://oscourse-tsinghua.github.io/LoongsonCsprj2020/)：每个页面上支持讨论区。
  * [github repo](https://github.com/oscourse-tsinghua/LoongsonCsprj2020)
-
-test...
 
 
