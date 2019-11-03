@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - 10
+
+cache: 
+  directories:
+    - $HOME/.cache/yarn
+    - $(yarn config get prefix)/bin/gitbook-cli/
+    - $HOME/.gitbook/
+before_install:
+  - composer config --global github-oauth.github.com "$GITHUB_TOKEN"
+
+before_script:
+  - yarn global add gitbook-cli
+
+script:
+  - true
+
+after_success:
+  - git log -1 --pretty=format:'%an' | xargs -0 test "Travis CI" = && exit 0  # 只有非 Travis 的 commit 才能继续执行
+  - git stash
+  - git checkout master
+  - git stash pop
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "Travis CI"
+  - git remote remove origin
+  - git remote add origin https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+  - git push --set-upstream origin master
+  - bash update_book.sh
